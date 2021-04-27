@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import styleImport from 'vite-plugin-style-import';
+import { visualizer } from 'rollup-plugin-visualizer';
 import { resolve } from 'path';
 
 // https://vitejs.dev/config/
@@ -23,6 +24,11 @@ export default defineConfig({
           },
         },
       ],
+    }),
+    visualizer({
+      open: true,
+      gzipSize: true,
+      brotliSize: true,
     }),
   ],
   resolve: {
