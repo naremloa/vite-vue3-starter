@@ -12,6 +12,11 @@
   "lint-staged": {
     "*.{vue,js,ts}": "eslint --fix"
   },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "element-plus": "^1.0.2-beta.41",
@@ -20,6 +25,8 @@
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.0.0",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
@@ -27,6 +34,7 @@
     "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.0.5",
     "@vue/test-utils": "^2.0.0-rc.6",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.25.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
